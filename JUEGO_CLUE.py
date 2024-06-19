@@ -2,7 +2,6 @@ import pygame
 import random
 import sys
 
-
 pygame.init()
 
 GRIS = (200,200,200)
@@ -200,7 +199,7 @@ def Asesino():
     return asesino 
 
 def Arma():
-    arma = ['Paraguas', 'Acha', 'Chango', 'Sarten', 'Rifle'][random.randrange(5)]
+    arma = ['Paraguas', 'Hacha', 'Chango', 'Sarten', 'Rifle'][random.randrange(5)]
     return arma
 
 def Lugar():
@@ -214,7 +213,7 @@ def abrir_ventana():
     asesino = Asesino() 
     arma = Arma()   
     lugar = Lugar()     
-    text = "                           Bienvenido al Juego Clue Academia\nEn este juego te sumergirás en un mundo de secretos, pistas ocultas\n y misterio de un crimen que resolver, donde matan a #4 Klaus.\nTenemos 5 sospechosos, 5 armas y 5 lugares el cual solo uno de ellos\n fue quien lo asesino, un arma involucra]da y un lugar donde\n sucedieron los hechos.\n\nLos sopechosos son:         Las Armas:                 Los Lugares:\n -#1 Luther                           -Paraguas                   -Sala\n -#2 Diego                            -Acha                           -Bar\n -#3 Allison                           -Chango                      -Oficina\n -#5 Five                               -Sarten                        -Habitacion\n -#7 Vanya                           -Rifle                            -Recibidor\n\n                             PRECIONA JUGAR PARA COMENSAR!!" 
+    text = "                           Bienvenido al Juego Clue Academia\n En este juego te sumergirás en un mundo de secretos, pistas ocultas\n y misterio de un crimen que resolver, donde matan a #4 Klaus.\n Tenemos 5 sospechosos, 5 armas y 5 lugares el cual solo uno de ellos\n fue quien lo asesino, un arma involucrada y un lugar donde\n sucedieron los hechos.\n\n Los sospechosos:            Las Armas:                 Los Lugares:\n -#1 Luther                           -Paraguas                   -Sala\n -#2 Diego                            -Hacha                         -Bar\n -#3 Allison                           -Chango                      -Oficina\n -#5 Five                               -Sartén                        -Habitación\n -#7 Vanya                           -Rifle                            -Recibidor\n\n                             PRESIONA JUGAR PARA COMENSAR!!" 
     
     Pista1 = False
     Pista2 = False
@@ -312,19 +311,19 @@ def abrir_ventana():
                     sys.exit()
                 elif boton_jugar_rect.collidepoint(evento.pos) and not Pista1:#Pista 1
                     if asesino == '#1 Luther':
-                        text = "                           Pista 1: Sospechosos\nLos sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Se encontraba solo en el sotano.\n- #2 Diego:\n-          Estaba con su novia en el parque.\n- #3 Allison:\n             Se encontraba con Vanya en el jardin.\n- #5 Five:\n          Estaba disfrutando de un helado con mama.\n- #7 Vanya:\n           Se encontraba con Allison practicando.\n\n                                                      SIGUIENTE"
+                        text = "                           Pista 1: Sospechosos\n Los sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Se encontraba solo en el sótano.\n- #2 Diego:\n-          Estaba con su novia en el parque.\n- #3 Allison:\n             Se encontraba con Vanya en el jardín.\n- #5 Five:\n          Estaba disfrutando de un helado con mamá.\n- #7 Vanya:\n           Se encontraba con Allison practicando.\n\n                                                      SIGUIENTE!"
                         Pista1 = True
                     elif asesino == '#2 Diego':
-                        text = "                           Pista 1: Sospechosos\nLos sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Se encontraba con Allison besandose.\n- #2 Diego:\n-          Practicaba su ansiedad.\n- #3 Allison:\n             Se encontraba con Luther en el jardin.\n- #5 Five:\n          Estaba meditando sobre el futuro.\n- #7 Vanya:\n           Estaba practicando con su violin.\n\n                                                      SIGUIENTE"
+                        text = "                           Pista 1: Sospechosos\n Los sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Se encontraba con Allison besándose.\n- #2 Diego:\n-          Practicaba su ansiedad.\n- #3 Allison:\n             Se encontraba con Luther en el jardín.\n- #5 Five:\n          Estaba meditando sobre el futuro.\n- #7 Vanya:\n           Estaba practicando con su violín.\n\n                                                      SIGUIENTE!"
                         Pista1 = True
                     elif asesino == '#3 Allison':
-                        text =  "                           Pista 1: Sospechosos\nLos sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Estaba con Five en el centro comercial.\n- #2 Diego:\n-          Estaba espiando a Papa.\n- #3 Allison:\n             Estaba Recuperandose en el sotano.\n- #5 Five:\n          Estaba con Luther.\n- #7 Vanya:\n           Estaba en unas clases de violin.\n\n                                                      SIGUIENTE"
+                        text =  "                           Pista 1: Sospechosos\n Los sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Estaba con Five en el centro comercial.\n- #2 Diego:\n-          Estaba espiando a Papa.\n- #3 Allison:\n             Estaba recuperándose en el sótano.\n- #5 Five:\n          Estaba con Luther.\n- #7 Vanya:\n           Estaba en unas clases de violín.\n\n                                                      SIGUIENTE!"
                         Pista1 = True
                     elif asesino == '#5 Five':
-                        text =  "                           Pista 1: Sospechosos\nLos sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Se estaba rasurando.\n- #2 Diego:\n-          Estaba comiendo con vanya.\n- #3 Allison:\n             Se estaba bañando.\n- #5 Five:\n          Estaba Ayudando a Klaus.\n- #7 Vanya:\n           Estaba en la cocina.\n\n                                                      SIGUIENTE"
+                        text = "                           Pista 1: Sospechosos\n Los sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Se estaba rasurando.\n- #2 Diego:\n-          Estaba comiendo con vanya.\n- #3 Allison:\n             Se estaba bañando.\n- #5 Five:\n          Estaba Ayudando a Klaus.\n- #7 Vanya:\n           Estaba en la cocina. \n\n                                                      SIGUIENTE!"
                         Pista1 = True
                     elif asesino == '#7 Vanya':
-                        text =  "                           Pista 1: Sospechosos\nLos sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Estaba en la luna.\n- #2 Diego:\n-          Estaba buscando a su novia.\n- #3 Allison:\n             Estaba en una entrevista.\n- #5 Five:\n          Estaba practicando sus viajes del futuro.\n- #7 Vanya:\n           No recuerda que estaba haciendo.\n\n                                                      SIGUIENTE"
+                        text =  "                           Pista 1: Sospechosos\n Los sospechosos Mencionan sus cuartadas mientras pasaba\n el crimen.\n- #1 Luther:\n            Estaba en la luna.\n- #2 Diego:\n-          Estaba buscando a su novia.\n- #3 Allison:\n             Estaba en una entrevista.\n- #5 Five:\n          Estaba practicando sus viajes del futuro.\n- #7 Vanya:\n           No recuerda que estaba haciendo.\n\n                                                      SIGUIENTE!"
                         Pista1 = True
                 elif boton_reiniciar_rect.collidepoint(evento.pos):
                     asesino = Asesino()
@@ -333,7 +332,7 @@ def abrir_ventana():
                     Pista1 = False  
                     Pista2 = False 
                     Pista3 = False        
-                    text = "                           Bienvenido al Juego Clue Academia\nEn este juego te sumergirás en un mundo de secretos, pistas ocultas\n y misterio de un crimen que resolver, donde matan a #4 Klaus.\nTenemos 5 sospechosos, 5 armas y 5 lugares el cual solo uno de ellos\n fue quien lo asesino, un arma involucra]da y un lugar donde\n sucedieron los hechos.\n\nLos sopechosos son:         Las Armas:                 Los Lugares:\n -#1 Luther                           -Paraguas                   -Sala\n -#2 Diego                            -Acha                           -Bar\n -#3 Allison                           -Chango                      -Oficina\n -#5 Five                               -Sarten                        -Habitacion\n -#7 Vanya                           -Rifle                            -Recibidor\n\n                             PRECIONA JUGAR PARA COMENSAR!!" 
+                    text = "                           Bienvenido al Juego Clue Academia\n En este juego te sumergirás en un mundo de secretos, pistas ocultas\n y misterio de un crimen que resolver, donde matan a #4 Klaus.\n Tenemos 5 sospechosos, 5 armas y 5 lugares el cual solo uno de ellos\n fue quien lo asesino, un arma involucrada y un lugar donde\n sucedieron los hechos.\n\n Los sospechosos:            Las Armas:                 Los Lugares:\n -#1 Luther                           -Paraguas                   -Sala\n -#2 Diego                            -Hacha                         -Bar\n -#3 Allison                           -Chango                      -Oficina\n -#5 Five                               -Sartén                        -Habitación\n -#7 Vanya                           -Rifle                            -Recibidor\n\n                             PRESIONA JUGAR PARA COMENSAR!!" 
                     for button in RadioButton1.all_buttons1:
                         button.deselect()
                     for button in RadioButton2.all_buttons2:
@@ -345,23 +344,23 @@ def abrir_ventana():
                     if arma == 'Paraguas':
                         Pista1 = False
                         Pista2 = True
-                        text = "                           Pista 2: Arma de asesinato\nSe buscaron las armas que estaban mas a la mano al momento del\n crimen.\n- Paraguas:\n           Se encontro en el cuarto de #3 Klaus\n- Acha:\n-      Estaba guardada en su lugar.\n- Chango:\n         Estaba haciendo el aseo.\n- Sarten:\n         La estaba usando mama para cocinar.\n- Rifle:\n        Papa de estaba dando mantenimiento.\n\n                                                      SIGUIENTE"
-                    elif arma == 'Acha':
+                        text = "                           Pista 2: Arma de asesinato\n Se buscaron las armas que estaban más a la mano al momento del\n crimen.\n- Paraguas:\n           Se encontró en el cuarto de #4 Klaus\n- Hacha:\n-      Estaba guardada en su lugar.\n- Chango:\n         Estaba haciendo el aseo.\n- Sartén:\n         La estaba usando mamá para cocinar.\n- Rifle:\n        Papá de estaba dando mantenimiento.\n\n                                                      SIGUIENTE!"
+                    elif arma == 'Hacha':
                         Pista1 = False
                         Pista2 = True
-                        text = "                           Pista 2: Arma de asesinato\nSe buscaron las armas que estaban mas a la mano al momento del\n crimen.\n- Paraguas:\n           Se encontro colgado en su Lugar\n- Acha:\n-      Se encontro cerca del cuerpo de #3 Klaus.\n- Chango:\n         Estaba Comiendo con Papa.\n- Sarten:\n         Se encontro en la estufa.\n- Rifle:\n        Papa se lo llevo de caceria.\n\n                                                      SIGUIENTE"
+                        text = "                           Pista 2: Arma de asesinato\n Se buscaron las armas que estaban más a la mano al momento del\n crimen.\n- Paraguas:\n           Se encontró colgado en su Lugar\n- Hacha:\n-      Se encontró cerca del cuerpo de #4 Klaus.\n- Chango:\n         Estaba Comiendo con Papa.\n- Sartén:\n         Se encontró en la estufa.\n- Rifle:\n        Papá se lo llevo de cacería.\n\n                                                      SIGUIENTE!"
                     elif arma == 'Chango':
                         Pista1 = False
                         Pista2 = True
-                        text = "                           Pista 2: Arma de asesinato\nSe buscaron las armas que estaban mas a la mano al momento del\n crimen.\n- Paraguas:\n           Mama lo estaba usando en el jardin.\n- Acha:\n-      Se encontro en el jardin ya que cortaron un arbol\n        un dia anterior.\n- Chango:\n         No se encontro.\n- Sarten:\n         Estaba  sucia en el lavajillas con huevo.\n- Rifle:\n        Se encontro en su estuche.\n\n                                                      SIGUIENTE"
+                        text = "                           Pista 2: Arma de asesinato\n Se buscaron las armas que estaban más a la mano al momento del\n crimen.\n- Paraguas:\n           Mamá lo estaba usando en el jardín.\n- Hacha:\n-      Se encontró en el jardín ya que cortaron un árbol\n        un día anterior.\n- Chango:\n         No se encontró.\n- Sartén:\n         Estaba  sucia en el lavavajillas con huevo del desayuno.\n- Rifle:\n        Se encontró en su estuche.\n\n                                                      SIGUIENTE!"
                     elif arma == 'Sarten':
                         Pista1 = False
                         Pista2 = True
-                        text = "                           Pista 2: Arma de asesinato\nSe buscaron las armas que estaban mas a la mano al momento del\n crimen.\n- Paraguas:\n           Papa se lo llevo al trabajo.\n- Acha:\n-      Mama la esta usando para cortar el\n        arbol de la calle.\n- Chango:\n         Se fue con Papa al trabajo.\n- Sarten:\n         Se encontro sucia pero fuera del\n          lavavajillas.\n- Rifle:\n        Papa de estaba dando mantenimiento.\n\n                                                      SIGUIENTE"
+                        text = "                           Pista 2: Arma de asesinato\n Se buscaron las armas que estaban más a la mano al momento del\n crimen.\n- Paraguas:\n           Papá se lo llevo al trabajo.\n- Hacha:\n-      Mamá la está usando para cortar el\n        árbol de la calle.\n- Chango:\n         Se fue con Papá al trabajo.\n- Sartén:\n         Se encontró sucia pero fuera del\n          lavavajillas.\n- Rifle:\n        Papá de estaba dando mantenimiento.\n\n                                                      SIGUIENTE!"
                     elif arma == 'Rifle':
                         Pista1 = False
                         Pista2 = True
-                        text = "                           Pista 2: Arma de asesinato\nSe buscaron las armas que estaban mas a la mano al momento del\n crimen.\n- Paraguas:\n           Estaba colgado en su lugar.\n- Acha:\n-      Estaba en la coche de papa.\n- Chango:\n         Estaba comiendo.\n- Sarten:\n         Estaba en su lugar.\n- Rifle:\n        No se encontro.\n\n                                                      SIGUIENTE"
+                        text = "                           Pista 2: Arma de asesinato\n Se buscaron las armas que estaban más a la mano al momento del\n crimen.\n- Paraguas:\n           Estaba colgado en su lugar.\n- Hacha:\n-      Estaba en la coche de papá.\n- Chango:\n         Estaba comiendo.\n- Sartén:\n         Estaba en su lugar.\n- Rifle:\n        No se encontró.\n\n                                                      SIGUIENTE!"
                 elif boton_siguiente_rect.collidepoint(evento.pos) and Pista3:
                     # Procesar selecciones 
                     per_sel = obtener_seleccion(RadioButton1.all_buttons1)
@@ -373,30 +372,30 @@ def abrir_ventana():
                     if per_sel.text == asesino and arm_sel.text == arma and lugar == lug_sel.text:
                         text = "\n                                                  FELICIDADES!! \n\n                          Has resuelto el Crimen Detective CETIANO\n                   Espero te hayas Divertido con este Juego Didáctico\n\n\n\n\n\n\n\n\n\n                           Preciona Reiniciar para jugar nuevamente!!"
                     else: 
-                        text =  "\n                          ERROR, TU RESPUESAT FUE INCORRECTA!!\n\n Las respuestas correctas son:\n- "+asesino+"\n- "+arma+"\n- "+lugar+"\n\n                              Intenta Nuevamente Precionando Reiniciar"
+                        text =  "\n                          ERROR, TU RESPUESTA FUE INCORRECTA!!\n\n Las respuestas correctas son:\n- "+asesino+"\n- "+arma+"\n- "+lugar+"\n\n                              Intenta Nuevamente Precionando Reiniciar"
 
 
                 elif boton_siguiente_rect.collidepoint(evento.pos) and Pista2:
                     if lugar == 'Sala':
                         Pista2 = False
                         Pista3 = True
-                        text = "                           Pista 3: Lugar de crimen\nDespues de la muerte de Klaus se busco donde fue asesinado.\n- Sala:\n       habia sangre en la alfombra.\n- Bar:\n-     Papa estaba ahi todo el dia.\n- Oficina:\n          Papa la cerro con llave desde dias antes.\n- Habitacion:\n             Mama estaba limpeando.\n- Recibidor:\n            La camara no grabo nada.    \n\n   NOTA:\n       Despues de contestas las preguntas de abajo preciona\n SIGUIENTE para verificar tus respuestas con la base de datos."
+                        text = "                           Pista 3: Lugar de crimen\n Después de la muerte de Klaus se busco donde fue asesinado.\n- Sala:\n       había sangre en la alfombra.\n- Bar:\n-     Papa estaba ahí todo el día.\n- Oficina:\n          Papá la cerro con llave desde días antes.\n- Habitación:\n             Mama estaba limpiando.\n- Recibidor:\n            La cámara no grabo nada.    \n\n   NOTA:\n       Después de contestas las preguntas de abajo presiona\n SIGUIENTE para verificar tus respuestas con la base de datos."
                     elif lugar == 'Bar':
                         Pista2 = False
                         Pista3 = True
-                        text = "                           Pista 3: Lugar de crimen\nDespues de la muerte de Klaus se busco donde fue asesinado. \n- Sala:\n       La novia de #2 Diego estaba ahi.\n- Bar:\n-     Todo estaba fuera de su lugar.\n- Oficina:\n          Papa estuvo trabajando todo el dia ahi.\n- Habitacion:\n             Estaba Cerrada la puerta con llave.\n- Recibidor:\n            La camara no grabo nada.\n\n   NOTA:\n       Despues de contestas las preguntas de abajo preciona\n SIGUIENTE para verificar tus respuestas con la base de datos."
+                        text = "                           Pista 3: Lugar de crimen\n Después de la muerte de Klaus se buscó donde fue asesinado. \n- Sala:\n       La novia de #2 Diego estaba ahí.\n- Bar:\n-     Todo estaba fuera de su lugar.\n- Oficina:\n          Papá estuvo trabajando todo el día ahí.\n- Habitación: \n             Estaba Cerrada la puerta con llave.\n- Recibidor:\n            La cámara no grabo nada. \n\n   NOTA:\n       Después de contestas las preguntas de abajo presiona\n SIGUIENTE para verificar tus respuestas con la base de datos."
                     elif lugar == 'Oficina':
                         Pista2 = False
                         Pista3 = True
-                        text = "                           Pista 3: Lugar de crimen\nDespues de la muerte de Klaus se busco donde fue asesinado. \n- Sala:\n       Estaba todo en orden.\n- Bar:\n-     El que despacha las botellas estaba ahi\n- Oficina:\n          Estaba abierta la puerta.\n- Habitacion:\n             Estaba cerrada con llave.\n- Recibidor:\n            La abogada estaba ahi esperando a papa.\n\n   NOTA:\n       Despues de contestas las preguntas de abajo preciona\n SIGUIENTE para verificar tus respuestas con la base de datos."
+                        text = "                           Pista 3: Lugar de crimen\n Después de la muerte de Klaus se buscó donde fue asesinado. \n- Sala:\n       Estaba todo en orden.\n- Bar:\n-     El que despacha las botellas estaba ahí\n- Oficina:\n          Estaba abierta la puerta.\n- Habitación: \n             Estaba cerrada con llave.\n- Recibidor:\n            La abogada estaba ahí esperando a papá. \n\n   NOTA:\n       Después de contestas las preguntas de abajo presiona\n SIGUIENTE para verificar tus respuestas con la base de datos."
                     elif lugar == 'Habitacion':
                         Pista2 = False
                         Pista3 = True
-                        text = "                           Pista 3: Lugar de crimen\nDespues de la muerte de Klaus se busco donde fue asesinado.\n- Sala:\n       Mama la estaba limpeando ya que iba a ver una fiesta.\n- Bar:\n-     Mama la estaba limpeando ya que iba a ver una fiesta.\n- Oficina:\n          Papa la cerro con llave desde dias antes.\n- Habitacion:\n             Todo estaba desordenado.\n- Recibidor:\n            La camara no grabo nada.\n\n   NOTA:\n       Despues de contestas las preguntas de abajo preciona\n SIGUIENTE para verificar tus respuestas con la base de datos."
+                        text = "                           Pista 3: Lugar de crimen\n Después de la muerte de Klaus se buscó donde fue asesinado.\n- Sala:\n       Mamá la estaba limpiando ya que iba a ver una fiesta.\n- Bar:\n-     Mamá la estaba limpiando ya que iba a ver una fiesta.\n- Oficina:\n          Papá la cerro con llave desde días antes.\n- Habitación:\n             Todo estaba desordenado.\n- Recibidor:\n            La cámara no grabo nada.\n\n   NOTA:\n       Después de contestas las preguntas de abajo presiona\n SIGUIENTE para verificar tus respuestas con la base de datos."
                     elif lugar == 'Recibidor':
                         Pista2 = False
                         Pista3 = True
-                        text = "                           Pista 3: Lugar de crimen\nDespues de la muerte de Klaus se busco donde fue asesinado. \n- Sala:\n       Five del futuro estaba ahi.\n- Bar:\n-     Se encontro todo en orden.\n- Oficina:\n          Papa trabajo todo el dia ahi.\n- Habitacion:\n             Mama estaba limpeando.\n- Recibidor:\n            Se encontro el arma ahi.\n\n   NOTA:\n       Despues de contestas las preguntas de abajo preciona\n SIGUIENTE para verificar tus respuestas con la base de datos."
+                        text = "                           Pista 3: Lugar de crimen\n Después de la muerte de Klaus se buscó donde fue asesinado. \n- Sala:\n       Five del futuro estaba ahí.\n- Bar:\n-     Se encontró todo en orden.\n- Oficina:\n          Papá trabajo todo el día ahí.\n- Habitación: \n             Mamá estaba limpiando.\n- Recibidor:\n            Se encontró el arma ahí.\n\n   NOTA:\n       Después de contestas las preguntas de abajo presiona\n SIGUIENTE para verificar tus respuestas con la base de datos."                                                                                
 
         max_lines = TEXTAREA_ALTO // font.get_linesize()
         start_line = max(0, min(-scroll_y // font.get_linesize(), len(lines) - max_lines))
